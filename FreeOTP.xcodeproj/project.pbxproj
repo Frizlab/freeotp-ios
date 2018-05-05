@@ -59,7 +59,6 @@
 		F10D88CF1B56A3C400482D15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F10D88D41B56A3C400482D15 /* FreeOTPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreeOTPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F10D88DA1B56A3C400482D15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F10D88E51B56A3C500482D15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F10D88F21B56A54B00482D15 /* CircleProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
 		F10D88F31B56A54B00482D15 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		F10D88F51B56A54B00482D15 /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
@@ -137,7 +136,6 @@
 				F1CA93CD1B56AA8400828B8B /* Base32.framework */,
 				F10D88C21B56A3C400482D15 /* FreeOTP */,
 				F10D88D71B56A3C400482D15 /* FreeOTPTests */,
-				F10D88E21B56A3C500482D15 /* FreeOTPUITests */,
 				7B78E0A5209E08FC00EF185F /* Frameworks */,
 				F10D88C11B56A3C400482D15 /* Products */,
 			);
@@ -186,14 +184,6 @@
 				F1CA93C51B56AA0000828B8B /* FreeOTPTests-Bridging-Header.h */,
 			);
 			path = FreeOTPTests;
-			sourceTree = "<group>";
-		};
-		F10D88E21B56A3C500482D15 /* FreeOTPUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F10D88E51B56A3C500482D15 /* Info.plist */,
-			);
-			path = FreeOTPUITests;
 			sourceTree = "<group>";
 		};
 		F10D89111B56A56600482D15 /* Controllers */ = {
