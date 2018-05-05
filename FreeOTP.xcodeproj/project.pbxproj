@@ -148,7 +148,11 @@
 				7B78E0A5209E08FC00EF185F /* Frameworks */,
 				F10D88C11B56A3C400482D15 /* Products */,
 			);
+			indentWidth = 3;
 			sourceTree = "<group>";
+			tabWidth = 3;
+			usesTabs = 1;
+			wrapsLines = 0;
 		};
 		F10D88C11B56A3C400482D15 /* Products */ = {
 			isa = PBXGroup;

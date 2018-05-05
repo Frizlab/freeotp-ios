@@ -21,26 +21,30 @@
 import Foundation
 import UIKit
 
+
+
 @UIApplicationMain
 class AppDelegate : UIResponder, UIApplicationDelegate {
-    var window: UIWindow?
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        return true
-    }
-
-    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        return true
-    }
-
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
-        if let urlc = URLComponents(url: url, resolvingAgainstBaseURL: true) {
-            if TokenStore().add(urlc) != nil {
-                window?.rootViewController?.loadView()
-                return true
-            }
-        }
-
-        return false
-    }
+	
+	var window: UIWindow?
+	
+	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+		return true
+	}
+	
+	func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+		return true
+	}
+	
+	func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+		if let urlc = URLComponents(url: url, resolvingAgainstBaseURL: true) {
+			if TokenStore().add(urlc) != nil {
+				window?.rootViewController?.loadView()
+				return true
+			}
+		}
+		
+		return false
+	}
+	
 }

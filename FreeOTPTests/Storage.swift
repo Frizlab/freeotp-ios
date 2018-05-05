@@ -22,23 +22,27 @@ import Foundation
 import FreeOTP
 import XCTest
 
+
+
 class Storage: XCTestCase {
-    func test() {
-        let def = UserDefaults.standard
-        def.set(["baz:bar"] as [String], forKey: "tokenOrder")
-        def.set("otpauth://hotp/foo:bar?secret=JBSWY3DPEHPK3PXP&issuer=baz", forKey: "baz:bar")
-        def.synchronize()
-
-        let ts = TokenStore()
-        XCTAssertGreaterThan(ts.count, 0)
-
-        let token = ts.load(0)
-        XCTAssertNotNil(token)
-        XCTAssertEqual(token!.issuer, "foo")
-        XCTAssertEqual(token!.label, "bar")
-        ts.erase(token: token!)
-
-        XCTAssertNil(def.stringArray(forKey: "tokenOrder"))
-        XCTAssertNil(def.string(forKey: "baz:bar"))
-    }
+	
+	func test() {
+		let def = UserDefaults.standard
+		def.set(["baz:bar"] as [String], forKey: "tokenOrder")
+		def.set("otpauth://hotp/foo:bar?secret=JBSWY3DPEHPK3PXP&issuer=baz", forKey: "baz:bar")
+		def.synchronize()
+		
+		let ts = TokenStore()
+		XCTAssertGreaterThan(ts.count, 0)
+		
+		let token = ts.load(0)
+		XCTAssertNotNil(token)
+		XCTAssertEqual(token!.issuer, "foo")
+		XCTAssertEqual(token!.label, "bar")
+		ts.erase(token: token!)
+		
+		XCTAssertNil(def.stringArray(forKey: "tokenOrder"))
+		XCTAssertNil(def.string(forKey: "baz:bar"))
+	}
+	
 }

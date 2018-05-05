@@ -21,6 +21,10 @@
 import Foundation
 import UIKit
 
+
+
 class TokenButton : UIButton {
-    var token: Token?
+	
+	var token: Token?
+	
 }

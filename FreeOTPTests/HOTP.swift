@@ -22,39 +22,43 @@ import FreeOTP
 import Foundation
 import XCTest
 
+
+
 class HOTP: XCTestCase {
-    func test() {
-        let tests: [String] = [
-            "755224",
-            "287082",
-            "359152",
-            "969429",
-            "338314",
-            "254676",
-            "287922",
-            "162583",
-            "399871",
-            "520489"
-        ]
-
-        let urlc = URLComponents(string: "otpauth://hotp/foo?secret=GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ&algorithm=SHA1&digits=6")
-        XCTAssertNotNil(urlc)
-
-        var otp = OTP(urlc: urlc!)
-        XCTAssertNotNil(otp)
-
-        let data = NSKeyedArchiver.archivedData(withRootObject: otp!)
-
-        for i in 0..<tests.count {
-            XCTAssertEqual(otp!.code(Int64(i)), tests[i])
-        }
-
-        otp = NSKeyedUnarchiver.unarchiveObject(with: data) as? OTP
-        XCTAssertNotNil(otp)
-
-        for i in 0..<tests.count {
-            let code = otp!.code(Int64(i))
-            XCTAssertEqual(code, tests[i])
-        }
-    }
+	
+	func test() {
+		let tests: [String] = [
+			"755224",
+			"287082",
+			"359152",
+			"969429",
+			"338314",
+			"254676",
+			"287922",
+			"162583",
+			"399871",
+			"520489"
+		]
+		
+		let urlc = URLComponents(string: "otpauth://hotp/foo?secret=GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ&algorithm=SHA1&digits=6")
+		XCTAssertNotNil(urlc)
+		
+		var otp = OTP(urlc: urlc!)
+		XCTAssertNotNil(otp)
+		
+		let data = NSKeyedArchiver.archivedData(withRootObject: otp!)
+		
+		for i in 0..<tests.count {
+			XCTAssertEqual(otp!.code(Int64(i)), tests[i])
+		}
+		
+		otp = NSKeyedUnarchiver.unarchiveObject(with: data) as? OTP
+		XCTAssertNotNil(otp)
+		
+		for i in 0..<tests.count {
+			let code = otp!.code(Int64(i))
+			XCTAssertEqual(code, tests[i])
+		}
+	}
+	
 }
