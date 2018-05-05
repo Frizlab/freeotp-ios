@@ -85,8 +85,8 @@
 		F1CA93C61B56AA0000828B8B /* HOTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HOTP.swift; sourceTree = "<group>"; };
 		F1CA93C71B56AA0000828B8B /* TOTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TOTP.swift; sourceTree = "<group>"; };
 		F1CA93C81B56AA0000828B8B /* URI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URI.swift; sourceTree = "<group>"; };
-		F1CA93CC1B56AA8400828B8B /* moa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = moa.framework; path = Carthage/Build/iOS/moa.framework; sourceTree = "<group>"; };
-		F1CA93CD1B56AA8400828B8B /* Base32.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Base32.framework; path = Carthage/Build/iOS/Base32.framework; sourceTree = "<group>"; };
+		F1CA93CC1B56AA8400828B8B /* moa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = moa.framework; sourceTree = "<group>"; };
+		F1CA93CD1B56AA8400828B8B /* Base32.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Base32.framework; sourceTree = "<group>"; };
 		F1CA93D31B56AB9500828B8B /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
 		F1CA93D41B56AB9500828B8B /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
 		F1CA93D51B56AB9500828B8B /* qrcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qrcode.png; sourceTree = "<group>"; };
@@ -129,13 +129,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7B78E0AC209E0B5E00EF185F /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				F1CA93CD1B56AA8400828B8B /* Base32.framework */,
+				F1CA93CC1B56AA8400828B8B /* moa.framework */,
+			);
+			name = Dependencies;
+			path = Carthage/Build/iOS;
+			sourceTree = "<group>";
+		};
 		F10D88B71B56A3C400482D15 = {
 			isa = PBXGroup;
 			children = (
-				F1CA93CC1B56AA8400828B8B /* moa.framework */,
-				F1CA93CD1B56AA8400828B8B /* Base32.framework */,
 				F10D88C21B56A3C400482D15 /* FreeOTP */,
 				F10D88D71B56A3C400482D15 /* FreeOTPTests */,
+				7B78E0AC209E0B5E00EF185F /* Dependencies */,
 				7B78E0A5209E08FC00EF185F /* Frameworks */,
 				F10D88C11B56A3C400482D15 /* Products */,
 			);
