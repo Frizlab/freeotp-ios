@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B78E0A6209E08FC00EF185F /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18FA5351B571E2200B1CEAD /* CoreBluetooth.framework */; };
+		7B78E0A7209E090100EF185F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18FA5391B571E4800B1CEAD /* CoreGraphics.framework */; };
+		7B78E0A8209E090700EF185F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18FA53D1B571E5D00B1CEAD /* Foundation.framework */; };
+		7B78E0A9209E090C00EF185F /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18FA5371B571E3B00B1CEAD /* Photos.framework */; };
+		7B78E0AA209E090F00EF185F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18FA53B1B571E5500B1CEAD /* UIKit.framework */; };
 		F10D88C41B56A3C400482D15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D88C31B56A3C400482D15 /* AppDelegate.swift */; };
 		F10D88C91B56A3C400482D15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F10D88C71B56A3C400482D15 /* Main.storyboard */; };
 		F10D88CB1B56A3C400482D15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F10D88CA1B56A3C400482D15 /* Assets.xcassets */; };
@@ -23,11 +28,6 @@
 		F10D890E1B56A54B00482D15 /* TokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D88FE1B56A54B00482D15 /* TokenStore.swift */; };
 		F10D890F1B56A54B00482D15 /* TokensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D88FF1B56A54B00482D15 /* TokensViewController.swift */; };
 		F10D89101B56A54B00482D15 /* UICollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D89001B56A54B00482D15 /* UICollectionViewFlowLayout.swift */; };
-		F18FA5361B571E2200B1CEAD /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18FA5351B571E2200B1CEAD /* CoreBluetooth.framework */; };
-		F18FA5381B571E3B00B1CEAD /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18FA5371B571E3B00B1CEAD /* Photos.framework */; };
-		F18FA53A1B571E4800B1CEAD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18FA5391B571E4800B1CEAD /* CoreGraphics.framework */; };
-		F18FA53C1B571E5500B1CEAD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18FA53B1B571E5500B1CEAD /* UIKit.framework */; };
-		F18FA53E1B571E5D00B1CEAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18FA53D1B571E5D00B1CEAD /* Foundation.framework */; };
 		F18FA5401B57339F00B1CEAD /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18FA53F1B57339F00B1CEAD /* Storage.swift */; };
 		F18FA5441B58D30800B1CEAD /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18FA5431B58D30800B1CEAD /* KeychainStore.swift */; };
 		F19DA56E1B5C832600A54DDC /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F19DA56D1B5C832600A54DDC /* Launch.storyboard */; };
@@ -100,11 +100,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F18FA5361B571E2200B1CEAD /* CoreBluetooth.framework in Frameworks */,
-				F18FA53A1B571E4800B1CEAD /* CoreGraphics.framework in Frameworks */,
-				F18FA53E1B571E5D00B1CEAD /* Foundation.framework in Frameworks */,
-				F18FA5381B571E3B00B1CEAD /* Photos.framework in Frameworks */,
-				F18FA53C1B571E5500B1CEAD /* UIKit.framework in Frameworks */,
+				7B78E0A6209E08FC00EF185F /* CoreBluetooth.framework in Frameworks */,
+				7B78E0A7209E090100EF185F /* CoreGraphics.framework in Frameworks */,
+				7B78E0A8209E090700EF185F /* Foundation.framework in Frameworks */,
+				7B78E0A9209E090C00EF185F /* Photos.framework in Frameworks */,
+				7B78E0AA209E090F00EF185F /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,7 +118,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F10D88B71B56A3C400482D15 = {
+		7B78E0A5209E08FC00EF185F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				F18FA53D1B571E5D00B1CEAD /* Foundation.framework */,
@@ -126,11 +126,19 @@
 				F18FA5391B571E4800B1CEAD /* CoreGraphics.framework */,
 				F18FA5371B571E3B00B1CEAD /* Photos.framework */,
 				F18FA5351B571E2200B1CEAD /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F10D88B71B56A3C400482D15 = {
+			isa = PBXGroup;
+			children = (
 				F1CA93CC1B56AA8400828B8B /* moa.framework */,
 				F1CA93CD1B56AA8400828B8B /* Base32.framework */,
 				F10D88C21B56A3C400482D15 /* FreeOTP */,
 				F10D88D71B56A3C400482D15 /* FreeOTPTests */,
 				F10D88E21B56A3C500482D15 /* FreeOTPUITests */,
+				7B78E0A5209E08FC00EF185F /* Frameworks */,
 				F10D88C11B56A3C400482D15 /* Products */,
 			);
 			sourceTree = "<group>";
